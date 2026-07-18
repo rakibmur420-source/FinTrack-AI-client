@@ -17,14 +17,14 @@
 }
 
 .dark {
-  --paper: #102b29;
-  --paper-dim: #173936;
-  --surface: #1a423f;
-  --charcoal: #eceee9;
-  --gold: #dcb35f;
+  --paper: #071614;
+  --paper-dim: #0c201e;
+  --surface: #0f2624;
+  --charcoal: #f5f3ec;
+  --gold: #e3b75e;
   --gold-light: #edc87e;
-  --mint: #7ecbb0;
-  --rose: #d47862;
+  --mint: #7fd1b3;
+  --rose: #e08769;
 
   --background: var(--paper);
   --foreground: var(--charcoal);
