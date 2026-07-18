@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0f3a38;
+  --ink-light: #16514e;
+  --paper: #f2f4ef;
+  --paper-dim: #e7e9e2;
+  --gold: #c89b3c;
+  --gold-light: #e0b95c;
+  --mint: #5faf92;
+  --charcoal: #1a211f;
+  --rose: #b6503a;
+
+  --background: var(--paper);
+  --foreground: var(--charcoal);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-light: var(--ink-light);
+  --color-paper: var(--paper);
+  --color-paper-dim: var(--paper-dim);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-mint: var(--mint);
+  --color-charcoal: var(--charcoal);
+  --color-rose: var(--rose);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-inter);
+  --font-data: var(--font-plex-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
+.font-data {
+  font-family: var(--font-data), monospace;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.ledger-tape {
+  animation: tape-scroll 28s linear infinite;
+}
+
+@keyframes tape-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ledger-tape { animation: none; }
+}
