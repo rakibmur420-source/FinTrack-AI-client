@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💰 FinTrack AI – AI-Powered Expense Ledger (Client)
 
-## Getting Started
+A modern full-stack AI-powered expense tracking application where users can manage expenses, automatically classify transactions using AI, and generate intelligent spending insights through a clean ledger-inspired interface.
 
-First, run the development server:
+## 🌐 Live Demo
+
+https://fin-track-ai-client.vercel.app
+
+## 🔗 Server Repository
+
+https://github.com/rakibmur420-source/FinTrack-AI-server
+
+---
+
+## 👤 Demo Account
+
+Click the **"Try Demo Account"** button on the login page.
+
+A demo account will be created automatically and you will be logged in instantly.
+
+No manual email or password is required.
+
+---
+
+## ✨ Key Features
+
+- Secure Email & Password Authentication
+- Google OAuth Login
+- One-click Demo Login
+- JWT-based Authentication
+- AI Expense Auto Classification
+- AI Smart Tag Generation
+- AI Expense Analyzer with Spending Insights
+- Upload CSV for AI Analysis
+- Search, Filter, Sort & Pagination
+- Protected Expense Management
+- Beautiful Ledger-inspired UI
+- Dark & Light Theme
+- Fully Responsive Design
+- Skeleton Loading UI
+- Toast Notifications
+- Smooth Animations
+
+---
+
+## 📄 Pages
+
+| Page | Route |
+|------|-------|
+| Home | `/` |
+| Explore Expenses | `/expenses` |
+| Expense Details | `/expenses/[id]` |
+| Login | `/login` |
+| Register | `/register` |
+| Add Expense | `/expenses/add` |
+| Manage Expenses | `/expenses/manage` |
+| About | `/about` |
+| Contact | `/contact` |
+| Help | `/help` |
+| Privacy & Terms | `/privacy` |
+
+---
+
+## 📦 Technologies Used
+
+- Next.js 15
+- React
+- TypeScript
+- Tailwind CSS
+- Axios
+- TanStack Query
+- React Hot Toast
+- Lucide React
+- Recharts
+- Next Themes
+
+---
+
+## 📦 NPM Packages
+
+| Package | Purpose |
+|----------|---------|
+| next | React Framework |
+| react | UI Library |
+| typescript | Type Safety |
+| axios | API Requests |
+| @tanstack/react-query | Data Fetching & Caching |
+| js-cookie | Token Storage |
+| react-hot-toast | Notifications |
+| lucide-react | Icons |
+| recharts | Charts & Analytics |
+| next-themes | Dark/Light Mode |
+| tailwindcss | Styling |
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env.local` file.
+
+```env
+NEXT_PUBLIC_API_URL=your_server_url/api
+NEXT_PUBLIC_GOOGLE_CLIENT_ID=your_google_client_id
+```
+
+---
+
+## 🚀 Getting Started
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build for production
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 💻 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- TanStack Query
+- Recharts
+- Groq AI (Backend)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built for **SCIC-13 Assignment 5 — Agentic AI Project**
