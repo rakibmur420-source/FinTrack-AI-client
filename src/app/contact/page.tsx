@@ -32,11 +32,11 @@ export default function ContactPage() {
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
-          placeholder="Your name" className="rounded-lg border border-charcoal/15 px-4 py-2.5 outline-none focus:border-ink" />
+          placeholder="Your name" className="rounded-lg border border-charcoal/15 bg-surface text-charcoal px-4 py-2.5 outline-none focus:border-ink" />
         <input value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
-          placeholder="Your email" className="rounded-lg border border-charcoal/15 px-4 py-2.5 outline-none focus:border-ink" />
+          placeholder="Your email" className="rounded-lg border border-charcoal/15 bg-surface text-charcoal px-4 py-2.5 outline-none focus:border-ink" />
         <textarea value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}
-          rows={5} placeholder="Your message" className="rounded-lg border border-charcoal/15 px-4 py-2.5 outline-none focus:border-ink" />
+          rows={5} placeholder="Your message" className="rounded-lg border border-charcoal/15 bg-surface text-charcoal px-4 py-2.5 outline-none focus:border-ink" />
         <button type="submit" className="rounded-full bg-ink px-6 py-3 text-sm font-medium text-ink-foreground hover:bg-ink-light">
           Send message
         </button>

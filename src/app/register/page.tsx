@@ -49,7 +49,7 @@ export default function RegisterPage() {
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="mt-1 w-full rounded-lg border border-charcoal/15 px-4 py-2.5 outline-none focus:border-ink"
+            className="mt-1 w-full rounded-lg border border-charcoal/15 bg-surface text-charcoal px-4 py-2.5 outline-none focus:border-ink"
             placeholder="Rakib Hasan"
           />
         </div>
@@ -59,7 +59,7 @@ export default function RegisterPage() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="mt-1 w-full rounded-lg border border-charcoal/15 px-4 py-2.5 outline-none focus:border-ink"
+            className="mt-1 w-full rounded-lg border border-charcoal/15 bg-surface text-charcoal px-4 py-2.5 outline-none focus:border-ink"
             placeholder="you@example.com"
           />
         </div>
@@ -69,7 +69,7 @@ export default function RegisterPage() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="mt-1 w-full rounded-lg border border-charcoal/15 px-4 py-2.5 outline-none focus:border-ink"
+            className="mt-1 w-full rounded-lg border border-charcoal/15 bg-surface text-charcoal px-4 py-2.5 outline-none focus:border-ink"
             placeholder="At least 6 characters"
           />
         </div>

@@ -75,14 +75,14 @@ function AddExpenseForm() {
         <div>
           <label className="text-sm font-medium text-charcoal">Title *</label>
           <input value={form.title} onChange={(e) => update("title", e.target.value)}
-            className="mt-1 w-full rounded-lg border border-charcoal/15 px-4 py-2.5 outline-none focus:border-ink"
+            className="mt-1 w-full rounded-lg border border-charcoal/15 bg-surface text-charcoal px-4 py-2.5 outline-none focus:border-ink"
             placeholder="e.g. Uber ride to airport" />
         </div>
 
         <div>
           <label className="text-sm font-medium text-charcoal">Short description *</label>
           <input value={form.shortDescription} onChange={(e) => update("shortDescription", e.target.value)}
-            className="mt-1 w-full rounded-lg border border-charcoal/15 px-4 py-2.5 outline-none focus:border-ink"
+            className="mt-1 w-full rounded-lg border border-charcoal/15 bg-surface text-charcoal px-4 py-2.5 outline-none focus:border-ink"
             placeholder="One line summary" />
         </div>
 
@@ -107,7 +107,7 @@ function AddExpenseForm() {
           <label className="text-sm font-medium text-charcoal">Full description *</label>
           <textarea value={form.fullDescription} onChange={(e) => update("fullDescription", e.target.value)}
             rows={4}
-            className="mt-1 w-full rounded-lg border border-charcoal/15 px-4 py-2.5 outline-none focus:border-ink"
+            className="mt-1 w-full rounded-lg border border-charcoal/15 bg-surface text-charcoal px-4 py-2.5 outline-none focus:border-ink"
             placeholder="Full details about this expense" />
         </div>
 
@@ -115,19 +115,19 @@ function AddExpenseForm() {
           <div>
             <label className="text-sm font-medium text-charcoal">Amount ($) *</label>
             <input type="number" step="0.01" value={form.amount} onChange={(e) => update("amount", e.target.value)}
-              className="mt-1 w-full rounded-lg border border-charcoal/15 px-4 py-2.5 outline-none focus:border-ink" />
+              className="mt-1 w-full rounded-lg border border-charcoal/15 bg-surface text-charcoal px-4 py-2.5 outline-none focus:border-ink" />
           </div>
           <div>
             <label className="text-sm font-medium text-charcoal">Date *</label>
             <input type="date" value={form.date} onChange={(e) => update("date", e.target.value)}
-              className="mt-1 w-full rounded-lg border border-charcoal/15 px-4 py-2.5 outline-none focus:border-ink" />
+              className="mt-1 w-full rounded-lg border border-charcoal/15 bg-surface text-charcoal px-4 py-2.5 outline-none focus:border-ink" />
           </div>
         </div>
 
         <div>
           <label className="text-sm font-medium text-charcoal">Category *</label>
           <select value={form.category} onChange={(e) => update("category", e.target.value)}
-            className="mt-1 w-full rounded-lg border border-charcoal/15 px-4 py-2.5 outline-none focus:border-ink">
+            className="mt-1 w-full rounded-lg border border-charcoal/15 bg-surface text-charcoal px-4 py-2.5 outline-none focus:border-ink">
             {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
           </select>
         </div>
@@ -135,7 +135,7 @@ function AddExpenseForm() {
         <div>
           <label className="text-sm font-medium text-charcoal">Image URL (optional)</label>
           <input value={form.imageURL} onChange={(e) => update("imageURL", e.target.value)}
-            className="mt-1 w-full rounded-lg border border-charcoal/15 px-4 py-2.5 outline-none focus:border-ink"
+            className="mt-1 w-full rounded-lg border border-charcoal/15 bg-surface text-charcoal px-4 py-2.5 outline-none focus:border-ink"
             placeholder="https://..." />
         </div>
 

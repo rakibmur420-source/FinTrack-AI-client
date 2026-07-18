@@ -43,14 +43,14 @@ export default function ExplorePage() {
             value={search}
             onChange={(e) => { setSearch(e.target.value); setPage(1); }}
             placeholder="Search by title or description..."
-            className="w-full rounded-full border border-charcoal/15 py-2.5 pl-10 pr-4 outline-none focus:border-ink"
+            className="w-full rounded-full border border-charcoal/15 bg-surface text-charcoal py-2.5 pl-10 pr-4 outline-none focus:border-ink"
           />
         </div>
 
         <select
           value={category}
           onChange={(e) => { setCategory(e.target.value); setPage(1); }}
-          className="rounded-full border border-charcoal/15 px-4 py-2.5 outline-none focus:border-ink"
+          className="rounded-full border border-charcoal/15 bg-surface text-charcoal px-4 py-2.5 outline-none focus:border-ink"
         >
           {CATEGORIES.map((c) => (
             <option key={c} value={c}>{c === "all" ? "All categories" : c}</option>
@@ -60,7 +60,7 @@ export default function ExplorePage() {
         <select
           value={sort}
           onChange={(e) => setSort(e.target.value)}
-          className="rounded-full border border-charcoal/15 px-4 py-2.5 outline-none focus:border-ink"
+          className="rounded-full border border-charcoal/15 bg-surface text-charcoal px-4 py-2.5 outline-none focus:border-ink"
         >
           <option value="-date">Newest date</option>
           <option value="date">Oldest date</option>
@@ -76,7 +76,7 @@ export default function ExplorePage() {
           value={minAmount}
           onChange={(e) => { setMinAmount(e.target.value); setPage(1); }}
           placeholder="Min $"
-          className="w-28 rounded-full border border-charcoal/15 px-4 py-2 text-sm outline-none focus:border-ink"
+          className="w-28 rounded-full border border-charcoal/15 bg-surface text-charcoal px-4 py-2 text-sm outline-none focus:border-ink"
         />
         <span className="text-charcoal/40">–</span>
         <input
@@ -84,7 +84,7 @@ export default function ExplorePage() {
           value={maxAmount}
           onChange={(e) => { setMaxAmount(e.target.value); setPage(1); }}
           placeholder="Max $"
-          className="w-28 rounded-full border border-charcoal/15 px-4 py-2 text-sm outline-none focus:border-ink"
+          className="w-28 rounded-full border border-charcoal/15 bg-surface text-charcoal px-4 py-2 text-sm outline-none focus:border-ink"
         />
         {(minAmount || maxAmount) && (
           <button
@@ -111,7 +111,7 @@ export default function ExplorePage() {
               key={i}
               onClick={() => setPage(i + 1)}
               className={`h-9 w-9 rounded-full text-sm ${
-                page === i + 1 ? "bg-ink text-ink-foreground" : "border border-charcoal/15 text-charcoal/60"
+                page === i + 1 ? "bg-ink text-ink-foreground" : "border border-charcoal/15 bg-surface text-charcoal text-charcoal/60"
               }`}
             >
               {i + 1}
