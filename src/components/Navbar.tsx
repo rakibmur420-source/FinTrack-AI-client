@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { Menu, X, Receipt } from "lucide-react";
+import { useTheme } from "next-themes";
+import { Menu, X, Receipt, Sun, Moon } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 
 export default function Navbar() {
@@ -11,6 +12,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   const loggedOutLinks = [
     { href: "/", label: "Home" },
@@ -56,6 +61,15 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-4 md:flex">
+          {mounted && (
+            <button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              aria-label="Toggle theme"
+              className="rounded-full p-2 text-paper/70 hover:bg-paper/10 hover:text-gold-light"
+            >
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+          )}
           {user ? (
             <>
               <span className="font-data text-xs text-paper/70">{user.name}</span>
@@ -94,6 +108,15 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="flex items-center gap-2 text-left text-sm text-paper/80"
+              >
+                {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+                {theme === "dark" ? "Light mode" : "Dark mode"}
+              </button>
+            )}
             {user ? (
               <button onClick={handleLogout} className="text-left text-sm text-gold-light">
                 Log out

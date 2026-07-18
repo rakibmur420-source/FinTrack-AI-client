@@ -16,14 +16,16 @@ const CATEGORIES = [
 export default function ExplorePage() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("all");
+  const [minAmount, setMinAmount] = useState("");
+  const [maxAmount, setMaxAmount] = useState("");
   const [sort, setSort] = useState("-date");
   const [page, setPage] = useState(1);
 
   const { data, isLoading } = useQuery({
-    queryKey: ["expenses", search, category, sort, page],
+    queryKey: ["expenses", search, category, minAmount, maxAmount, sort, page],
     queryFn: async () => {
       const res = await api.get("/expenses", {
-        params: { search, category, sort, page, limit: 8 },
+        params: { search, category, minAmount, maxAmount, sort, page, limit: 8 },
       });
       return res.data as { expenses: Expense[]; pagination: PaginationMeta };
     },
@@ -65,6 +67,33 @@ export default function ExplorePage() {
           <option value="-amount">Amount: high to low</option>
           <option value="amount">Amount: low to high</option>
         </select>
+      </div>
+
+      <div className="mt-3 flex flex-wrap items-center gap-3">
+        <span className="text-sm text-charcoal/50">Amount range:</span>
+        <input
+          type="number"
+          value={minAmount}
+          onChange={(e) => { setMinAmount(e.target.value); setPage(1); }}
+          placeholder="Min $"
+          className="w-28 rounded-full border border-charcoal/15 px-4 py-2 text-sm outline-none focus:border-ink"
+        />
+        <span className="text-charcoal/40">–</span>
+        <input
+          type="number"
+          value={maxAmount}
+          onChange={(e) => { setMaxAmount(e.target.value); setPage(1); }}
+          placeholder="Max $"
+          className="w-28 rounded-full border border-charcoal/15 px-4 py-2 text-sm outline-none focus:border-ink"
+        />
+        {(minAmount || maxAmount) && (
+          <button
+            onClick={() => { setMinAmount(""); setMaxAmount(""); }}
+            className="text-sm text-rose underline underline-offset-4"
+          >
+            Clear
+          </button>
+        )}
       </div>
 
       <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

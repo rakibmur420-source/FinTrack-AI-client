@@ -4,7 +4,7 @@ import { Calendar, Tag } from "lucide-react";
 
 export default function ExpenseCard({ expense }: { expense: Expense }) {
   return (
-    <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-charcoal/10 bg-white shadow-sm transition-shadow hover:shadow-md">
+    <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-charcoal/10 bg-surface shadow-sm transition-shadow hover:shadow-md">
       <div className="h-40 w-full overflow-hidden bg-paper-dim">
         {expense.imageURL ? (
           // eslint-disable-next-line @next/next/no-img-element

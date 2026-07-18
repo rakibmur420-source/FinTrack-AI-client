@@ -5,6 +5,7 @@
   --ink-light: #16514e;
   --paper: #f2f4ef;
   --paper-dim: #e7e9e2;
+  --surface: #ffffff;
   --gold: #c89b3c;
   --gold-light: #e0b95c;
   --mint: #5faf92;
@@ -15,11 +16,26 @@
   --foreground: var(--charcoal);
 }
 
+.dark {
+  --paper: #102b29;
+  --paper-dim: #173936;
+  --surface: #1a423f;
+  --charcoal: #eceee9;
+  --gold: #dcb35f;
+  --gold-light: #edc87e;
+  --mint: #7ecbb0;
+  --rose: #d47862;
+
+  --background: var(--paper);
+  --foreground: var(--charcoal);
+}
+
 @theme inline {
   --color-ink: var(--ink);
   --color-ink-light: var(--ink-light);
   --color-paper: var(--paper);
   --color-paper-dim: var(--paper-dim);
+  --color-surface: var(--surface);
   --color-gold: var(--gold);
   --color-gold-light: var(--gold-light);
   --color-mint: var(--mint);

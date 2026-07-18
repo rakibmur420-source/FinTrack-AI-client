@@ -88,7 +88,7 @@ export default function Home() {
               { step: "AI reads it", body: "The model assigns a category and tags automatically." },
               { step: "See the pattern", body: "The analyzer turns entries into trends and KPIs." },
             ].map((s) => (
-              <div key={s.step} className="rounded-2xl bg-white p-6">
+              <div key={s.step} className="rounded-2xl bg-surface p-6">
                 <h3 className="font-display text-lg font-semibold text-ink">{s.step}</h3>
                 <p className="mt-2 text-sm text-charcoal/60">{s.body}</p>
               </div>
@@ -152,7 +152,7 @@ export default function Home() {
               { q: "Which AI model powers this?", a: "FinTrack AI uses Groq-hosted open models for fast classification and analysis." },
               { q: "Can I edit AI-generated tags?", a: "Yes — every tag and category suggestion is fully editable after generation." },
             ].map((f) => (
-              <details key={f.q} className="rounded-xl bg-white p-5">
+              <details key={f.q} className="rounded-xl bg-surface p-5">
                 <summary className="cursor-pointer font-medium text-charcoal">{f.q}</summary>
                 <p className="mt-2 text-sm text-charcoal/60">{f.a}</p>
               </details>
