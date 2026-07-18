@@ -111,7 +111,7 @@ export default function ExplorePage() {
               key={i}
               onClick={() => setPage(i + 1)}
               className={`h-9 w-9 rounded-full text-sm ${
-                page === i + 1 ? "bg-ink text-paper" : "border border-charcoal/15 text-charcoal/60"
+                page === i + 1 ? "bg-ink text-ink-foreground" : "border border-charcoal/15 text-charcoal/60"
               }`}
             >
               {i + 1}

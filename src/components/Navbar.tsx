@@ -39,7 +39,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-ink text-paper">
+    <header className="sticky top-0 z-50 w-full bg-ink text-ink-foreground">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
         <Link href="/" className="flex items-center gap-2 font-display text-xl font-semibold">
           <Receipt size={22} className="text-gold" />
@@ -52,7 +52,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               className={`text-sm transition-colors hover:text-gold-light ${
-                pathname === link.href ? "text-gold" : "text-paper/80"
+                pathname === link.href ? "text-gold" : "text-ink-foreground/80"
               }`}
             >
               {link.label}
@@ -65,14 +65,14 @@ export default function Navbar() {
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               aria-label="Toggle theme"
-              className="rounded-full p-2 text-paper/70 hover:bg-paper/10 hover:text-gold-light"
+              className="rounded-full p-2 text-ink-foreground/70 hover:bg-ink-foreground/10 hover:text-gold-light"
             >
               {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
             </button>
           )}
           {user ? (
             <>
-              <span className="font-data text-xs text-paper/70">{user.name}</span>
+              <span className="font-data text-xs text-ink-foreground/70">{user.name}</span>
               <button
                 onClick={handleLogout}
                 className="rounded-full border border-gold/60 px-4 py-1.5 text-sm text-gold-light hover:bg-gold/10"
@@ -82,7 +82,7 @@ export default function Navbar() {
             </>
           ) : (
             <>
-              <Link href="/login" className="text-sm text-paper/80 hover:text-gold-light">
+              <Link href="/login" className="text-sm text-ink-foreground/80 hover:text-gold-light">
                 Log in
               </Link>
               <Link
@@ -101,17 +101,17 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-paper/10 px-5 pb-4 md:hidden">
+        <div className="border-t border-ink-foreground/10 px-5 pb-4 md:hidden">
           <nav className="flex flex-col gap-3 pt-3">
             {links.map((link) => (
-              <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="text-sm text-paper/80">
+              <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="text-sm text-ink-foreground/80">
                 {link.label}
               </Link>
             ))}
             {mounted && (
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="flex items-center gap-2 text-left text-sm text-paper/80"
+                className="flex items-center gap-2 text-left text-sm text-ink-foreground/80"
               >
                 {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
                 {theme === "dark" ? "Light mode" : "Dark mode"}
@@ -123,7 +123,7 @@ export default function Navbar() {
               </button>
             ) : (
               <>
-                <Link href="/login" onClick={() => setOpen(false)} className="text-sm text-paper/80">
+                <Link href="/login" onClick={() => setOpen(false)} className="text-sm text-ink-foreground/80">
                   Log in
                 </Link>
                 <Link href="/register" onClick={() => setOpen(false)} className="text-sm text-gold-light">

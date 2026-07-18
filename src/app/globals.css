@@ -3,6 +3,7 @@
 :root {
   --ink: #0f3a38;
   --ink-light: #16514e;
+  --ink-foreground: #f5f3ec;
   --paper: #f2f4ef;
   --paper-dim: #e7e9e2;
   --surface: #ffffff;
@@ -33,6 +34,7 @@
 @theme inline {
   --color-ink: var(--ink);
   --color-ink-light: var(--ink-light);
+  --color-ink-foreground: var(--ink-foreground);
   --color-paper: var(--paper);
   --color-paper-dim: var(--paper-dim);
   --color-surface: var(--surface);

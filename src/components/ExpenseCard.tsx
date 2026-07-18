@@ -40,7 +40,7 @@ export default function ExpenseCard({ expense }: { expense: Expense }) {
 
         <Link
           href={`/expenses/${expense._id}`}
-          className="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-center text-sm font-medium text-paper hover:bg-ink-light"
+          className="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-center text-sm font-medium text-ink-foreground hover:bg-ink-light"
         >
           View Details
         </Link>

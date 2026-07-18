@@ -15,14 +15,14 @@ export default function Home() {
   return (
     <>
       {/* 1. HERO */}
-      <section className="relative flex min-h-[65vh] flex-col justify-center overflow-hidden bg-ink text-paper">
+      <section className="relative flex min-h-[65vh] flex-col justify-center overflow-hidden bg-ink text-ink-foreground">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-2 md:items-center">
           <div>
             <span className="font-data text-xs uppercase tracking-widest text-gold">Agentic AI · Expense Ledger</span>
             <h1 className="mt-4 font-display text-4xl font-semibold leading-tight md:text-5xl">
               Every line item, <span className="text-gold">read and tagged</span> by AI.
             </h1>
-            <p className="mt-5 max-w-md text-paper/70">
+            <p className="mt-5 max-w-md text-ink-foreground/70">
               Log an expense and FinTrack AI classifies it, tags it, and folds it into a live
               analysis of where your money actually goes — no spreadsheets required.
             </p>
@@ -30,19 +30,19 @@ export default function Home() {
               <Link href="/register" className="flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-medium text-ink hover:bg-gold-light">
                 Start tracking <ArrowRight size={16} />
               </Link>
-              <Link href="/expenses" className="rounded-full border border-paper/30 px-6 py-3 text-sm hover:bg-paper/5">
+              <Link href="/expenses" className="rounded-full border border-ink-foreground/30 px-6 py-3 text-sm hover:bg-ink-foreground/5">
                 Explore the ledger
               </Link>
             </div>
           </div>
 
           {/* Signature element: scrolling ledger tape with AI tags */}
-          <div className="relative overflow-hidden rounded-2xl border border-paper/10 bg-ink-light/40 p-4">
+          <div className="relative overflow-hidden rounded-2xl border border-ink-foreground/10 bg-ink-light/40 p-4">
             <div className="flex gap-4 ledger-tape" style={{ width: "200%" }}>
               {[...tapeItems, ...tapeItems].map((item, i) => (
-                <div key={i} className="flex w-64 shrink-0 flex-col gap-2 rounded-xl bg-paper/5 p-4">
+                <div key={i} className="flex w-64 shrink-0 flex-col gap-2 rounded-xl bg-ink-foreground/5 p-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-paper/90">{item.title}</span>
+                    <span className="text-sm text-ink-foreground/90">{item.title}</span>
                     <span className="font-data text-sm text-gold-light">{item.amount}</span>
                   </div>
                   <span className="w-fit rounded-full bg-mint/15 px-2 py-0.5 font-data text-[10px] text-mint">
@@ -109,7 +109,7 @@ export default function Home() {
       </section>
 
       {/* 5. STATS / HIGHLIGHTS */}
-      <section className="bg-ink py-20 text-paper">
+      <section className="bg-ink py-20 text-ink-foreground">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:grid-cols-3">
           {[
             { n: "2", l: "AI agents working on your data" },
@@ -118,7 +118,7 @@ export default function Home() {
           ].map((s) => (
             <div key={s.l}>
               <div className="font-display text-4xl font-semibold text-gold">{s.n}</div>
-              <p className="mt-2 text-sm text-paper/60">{s.l}</p>
+              <p className="mt-2 text-sm text-ink-foreground/60">{s.l}</p>
             </div>
           ))}
         </div>
@@ -168,7 +168,7 @@ export default function Home() {
         <p className="mx-auto mt-3 max-w-md text-charcoal/60">
           Free to try with a demo account — no card required.
         </p>
-        <Link href="/register" className="mt-6 inline-block rounded-full bg-ink px-8 py-3 text-sm font-medium text-paper hover:bg-ink-light">
+        <Link href="/register" className="mt-6 inline-block rounded-full bg-ink px-8 py-3 text-sm font-medium text-ink-foreground hover:bg-ink-light">
           Create your account
         </Link>
       </section>

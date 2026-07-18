@@ -142,7 +142,7 @@ function AddExpenseForm() {
         {error && <p className="text-sm text-rose">{error}</p>}
 
         <button type="submit" disabled={submitting}
-          className="mt-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-paper hover:bg-ink-light disabled:opacity-50">
+          className="mt-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-ink-foreground hover:bg-ink-light disabled:opacity-50">
           {submitting ? "Submitting..." : "Submit"}
         </button>
       </form>

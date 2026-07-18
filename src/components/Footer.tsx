@@ -3,14 +3,14 @@ import { Receipt, GitFork, Link2, ExternalLink, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-paper/80">
+    <footer className="bg-ink text-ink-foreground/80">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2 font-display text-lg font-semibold text-paper">
+          <div className="flex items-center gap-2 font-display text-lg font-semibold text-ink-foreground">
             <Receipt size={20} className="text-gold" />
             FinTrack AI
           </div>
-          <p className="mt-3 max-w-xs text-sm text-paper/60">
+          <p className="mt-3 max-w-xs text-sm text-ink-foreground/60">
             An AI ledger that reads every line item and tells you what it means.
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-paper/10 py-4 text-center text-xs text-paper/50">
+      <div className="border-t border-ink-foreground/10 py-4 text-center text-xs text-ink-foreground/50">
         © {new Date().getFullYear()} FinTrack AI. Built for SCIC-13 Assignment 5.
       </div>
     </footer>
